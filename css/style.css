@@ -1,0 +1,44 @@
+.b1 {
+position: relative;
+left: 40px;
+top: 20px;
+width: 1000px;
+height: 450px;
+background-color: bisque;
+border-radius: 10px;
+padding: 20px;
+
+}
+.b1 td {
+    padding:10px;
+
+}
+
+.s1 {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(216, 216, 26);
+    color: rgb(15, 74, 125);
+    width: 80px;
+    border: 1px;
+    
+}
+
+.s1:hover {
+    background-color: rgb(229, 247, 148);
+}
+
+.s2 {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(240, 120, 80);
+    color: rgb(244, 245, 246);
+    width: 80px;
+    border: 1px;
+    
+}
+
+.s2:hover {
+    background-color: rgb(207, 64, 8);
+}
+
