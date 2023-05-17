@@ -47,6 +47,18 @@
                         <input type="submit" class="s2" value="Delete">
                     </form>
                 </td>
+                <td>
+                    <form action="Update_Form.php" method="POST">
+                        <input type="hidden" name="idC" value="<?= $row["idClient"] ?>">
+                        <input type="hidden" name="NC" value="<?= $row["NomClient"] ?>">
+                        <input type="hidden" name="PC" value="<?= $row["PrenomClient"] ?>">
+                        <input type="hidden" name="DN" value="<?= $row["DateNaiss"] ?>">
+                        <input type="hidden" name="AC" value="<?= $row["AdressClient"] ?>">
+                        <input type="hidden" name="MC" value="<?= $row["Email"] ?>">
+                        
+                        <input type="submit" class="s3" value="Update">
+                    </form>
+                </td>
                         
             </tr> <?php } ?>
 

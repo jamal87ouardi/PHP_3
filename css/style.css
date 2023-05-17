@@ -42,3 +42,17 @@ padding: 20px;
     background-color: rgb(207, 64, 8);
 }
 
+.s3 {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(148, 175, 223);
+    color: rgb(244, 245, 246);
+    width: 80px;
+    border: 1px;
+    
+}
+
+.s3:hover {
+    background-color: rgb(54, 64, 212);
+}
+
