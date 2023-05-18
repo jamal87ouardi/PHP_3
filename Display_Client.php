@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION["client_id"]))
+{
+    header("location: Login_Form.php");
+
+} 
+
+
+?>
+
 
 
 <html>
@@ -16,6 +29,17 @@
     $result = $conn->query($sql);
     $conn->close();
     ?>
+        <div class="bjr">
+            <?php 
+                $msg= "Bonjour ".$_SESSION["client_nom"]." ".$_SESSION["client_prenom"];
+                echo $msg;
+            ?>
+            <form action="Logout.php">
+                        
+                        <input type="submit" class="s2" value="Logout">
+                    </form>
+
+        </div>
 
         <div class="b1">
 
@@ -55,6 +79,7 @@
                         <input type="hidden" name="DN" value="<?= $row["DateNaiss"] ?>">
                         <input type="hidden" name="AC" value="<?= $row["AdressClient"] ?>">
                         <input type="hidden" name="MC" value="<?= $row["Email"] ?>">
+                        
                         
                         <input type="submit" class="s3" value="Update">
                     </form>

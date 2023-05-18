@@ -1,4 +1,15 @@
-<!DOCTYPE html>
+<?php
+
+session_start();
+
+if(!isset($_SESSION["client_id"]))
+{
+    header("location: Login_Form.php");
+
+} 
+
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,6 +51,11 @@
                     <tr>
                         <td>Email :</td>
                         <td><input type="text" name="MC"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Password :</td>
+                        <td><input type="password" name="PassC"></td>
                     </tr>
                    
                     <tr>

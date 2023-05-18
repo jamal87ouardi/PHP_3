@@ -40,6 +40,7 @@
                         <td><input type="text" name="MCu" value="<?= $_POST["MC"]?>"></td>
                     </tr>
                    
+                   
                     <tr>
                         <td>
                             <input type="submit" class="s1" value="Update">
