@@ -11,7 +11,8 @@ CREATE TABLE Client (
   `PrenomClient` VARCHAR(45) ,
   `DateNaiss` DATE,
   `AdressClient` VARCHAR(60),
-  `Email` VARCHAR(45),
+  `Email` VARCHAR(45) unique,
+   `passwd` varchar(20) NOT NULL,
   PRIMARY KEY (`idClient`)
   );
 
@@ -78,11 +79,11 @@ insert into produit values
 (4,'HP 840',4100,2),(5,'Dell latitude 2C',5000,2),(6,'IBM thinkpad',5200,2);
 
 insert into client values 
-(1,'Labyad','Ayman','2000-03-10','123 Rue nakhil','labyad@gmail.com'),
-(2,'Wafi','Taha','1992-06-11','200 Av Bayrout','wafi@gmail.com'),
-(3,'Lahmar','wafae','2001-08-19','4 Rue Laayoune','lahmar@gmail.com'),
-(4,'Jamali','Ayoub','2002-05-13','138 Av Nasr','ayo@hotmail.fr'),
-(5,'Youbi','Amina','1999-01-05','17 Rue nakhil','youbi@yahoo.com');
+(1,'Labyad','Ayman','2000-03-10','123 Rue nakhil','labyad@gmail.com','123456'),
+(2,'Wafi','Taha','1992-06-11','200 Av Bayrout','wafi@gmail.com','azerty'),
+(3,'Lahmar','wafae','2001-08-19','4 Rue Laayoune','lahmar@gmail.com','123456'),
+(4,'Jamali','Ayoub','2002-05-13','138 Av Nasr','ayo@hotmail.fr','azerty'),
+(5,'Youbi','Amina','1999-01-05','17 Rue nakhil','youbi@yahoo.com','123456');
 
 insert into payement values
 (1,'oui','2023-03-30 12:15:00',4300,'en ligne'),
@@ -94,3 +95,6 @@ insert into commandes values
 (1,3,1,1,1,'2023-03-30 12:15:00'),
 (2,5,2,2,2,'2023-03-15 12:30:00'),
 (3,1,5,2,3,'2022-12-25 11:00:00')
+;
+
+
