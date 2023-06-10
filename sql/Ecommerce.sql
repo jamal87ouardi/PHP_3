@@ -1,8 +1,8 @@
-drop database if exists ecommerce;
+drop database if exists ecommerce2;
 
-create database ecommerce;
+create database ecommerce2;
 
-use ecommerce;
+use ecommerce2;
 
 
 CREATE TABLE Client (
@@ -28,6 +28,7 @@ CREATE TABLE Produit (
   `nomProduit` VARCHAR(45),
   `prixPro` FLOAT,
   `idCat` INT ,
+  `img` varchar(300) ,
   PRIMARY KEY (`idProduit`),
   CONSTRAINT `idCat`
     FOREIGN KEY (idCat)
@@ -75,8 +76,12 @@ insert into categorie values
 (1,'Smartphones'),(2,'Ordinateur protable');
 
 insert into produit values
-(1,'Samsung A10',4300,1),(2,'Xioami x23',3200,1),(3,'iphone 12',5800,1),
-(4,'HP 840',4100,2),(5,'Dell latitude 2C',5000,2),(6,'IBM thinkpad',5200,2);
+(1,'Samsung S21',4300,1,'https://boutique.orange.ma/media/catalog/product/cache/d910b99017a429d140f130a621328461/s/m/sm-g996_s21__phantom_black_backfront.png'),
+(2,'Xioami Redmi 10',3200,1,'https://gsm.ma/wp-content/uploads/2021/09/002-4.jpg'),
+(3,'iphone 12',5800,1,'https://uno.ma/pub/media/catalog/product/cache/af8d7fd2c4634f9c922fba76a4a30c04/l/d/ld0005940089_1.jpeg'),
+(4,'HP 840',4100,2,'https://pcmaroc.com/1605/hp-840-g3-i5-8go-500go-14.jpg'),
+(5,'Dell latitude 5420',5000,2,'https://duga.ma/2149-large_default/ordinateur-portable-dell-latitude-5420-i5-11thn036l542014emea.jpg'),
+(6,'Lenovo thinkpad T15',5200,2,'https://www.techpro.ma/6225-medium_default/pc-portable-lenovo-thinkpad-t15-gen-2-20w400qxfe.jpg');
 
 insert into client values 
 (1,'Labyad','Ayman','2000-03-10','123 Rue nakhil','labyad@gmail.com','123456'),
@@ -96,5 +101,7 @@ insert into commandes values
 (2,5,2,2,2,'2023-03-15 12:30:00'),
 (3,1,5,2,3,'2022-12-25 11:00:00')
 ;
+
+select * from produit;
 
 

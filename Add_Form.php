@@ -22,7 +22,7 @@ if(!isset($_SESSION["client_id"]))
 <body>
       <div class="b1">
 
-        <form action="Add_Client.php" method="POST">
+        <form id="addForm">
             <table>
                     <tr>
                         <td>ID :</td>
@@ -50,12 +50,12 @@ if(!isset($_SESSION["client_id"]))
 
                     <tr>
                         <td>Email :</td>
-                        <td><input type="text" name="MC"></td>
+                        <td><input type="text" id="MC" name="MC"></td>
                     </tr>
 
                     <tr>
                         <td>Password :</td>
-                        <td><input type="password" name="PassC"></td>
+                        <td><input type="password" id="PassC" name="PassC"></td>
                     </tr>
                    
                     <tr>
@@ -70,9 +70,14 @@ if(!isset($_SESSION["client_id"]))
 
             </table>
         </form>
+        <label id="addState"></label>
 
 
       </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      <script src="js/myScript.js"></script>
 
 </body>
 </html>
